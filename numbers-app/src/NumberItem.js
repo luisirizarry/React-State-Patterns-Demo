@@ -7,16 +7,16 @@ import React from "react";
  * - remove: parent fn to call
  */
 
-function NumberItem(props) {
+function NumberItem({ value, remove }) {
 
   /** Delete num via parent fn */
-  function handleRemove(evt) {
-    props.remove(props.value);
+  function handleRemove() {
+    remove(props.value);
   }
 
   return (
     <li>
-      {props.value}
+      {value}
       <button onClick={handleRemove}>
         X
       </button>
